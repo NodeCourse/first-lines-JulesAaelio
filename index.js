@@ -2,7 +2,7 @@ const fs = require('fs');
 console.log('Salut');
 
 function logTime() {
-    let timestamp = new Date().getTime().toString();
+    let timestamp = Date.now().toString();
     console.log('Saved : ', timestamp);
 
     fs.appendFile('timelog.txt',  + timestamp +  '\n', (e) => {
